@@ -1,0 +1,34 @@
+rss_importer.admin:
+  title: 'Rss Importer'
+  route_name: rss_importer.admin
+  description: 'List Rss Item entities'
+  parent: system.admin_structure
+  weight: 111
+
+rss_item.admin.structure.settings:
+  title: 'Rss Item settings'
+  description: 'Configure Rss Item entities'
+  route_name: rss_item.settings
+  parent: rss_importer.admin
+
+# Rss Item menu items definition
+entity.rss_item.collection:
+  title: 'Rss Item list'
+  route_name: entity.rss_item.collection
+  description: 'List Rss Item entities'
+  parent: rss_importer.admin
+
+# Rss category menu items definition
+entity.rss_category.collection:
+  title: 'Rss category'
+  route_name: entity.rss_category.collection
+  description: 'List Rss category (bundles)'
+  parent: rss_importer.admin
+
+# Configuration settings
+rss_importer.rss_settings_form:
+  title: 'RssSettings'
+  route_name: rss_importer.rss_settings_form
+  description: 'Set rss settings'
+  parent: system.admin_config_system
+  weight: 99

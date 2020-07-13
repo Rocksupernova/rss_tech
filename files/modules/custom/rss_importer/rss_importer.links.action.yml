@@ -1,0 +1,10 @@
+entity.rss_item.add_form:
+  route_name: entity.rss_item.add_form
+  title: 'Add Rss Item'
+  appears_on:
+    - entity.rss_item.collection
+entity.rss_category.add_form:
+  route_name: entity.rss_category.add_form
+  title: 'Add Rss category'
+  appears_on:
+    - entity.rss_category.collection

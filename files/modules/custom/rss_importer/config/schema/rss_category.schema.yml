@@ -1,0 +1,12 @@
+rss_importer.rss_category.*:
+  type: config_entity
+  label: 'Rss category config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

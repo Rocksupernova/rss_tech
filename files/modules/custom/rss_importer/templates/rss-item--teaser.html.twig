@@ -1,0 +1,36 @@
+{#
+/**
+ * @file rss-item.html.twig
+ * Default theme implementation to present Rss Item data.
+ *
+ * This template is used when viewing Rss Item pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_rss_item()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set classes = [
+  'rss-item-teaser',
+] %}
+{{ attach_library('rss_importer/rss_item_teaser') }}
+<div{{ attributes.addClass(classes) }}>
+  <a href="{{ rss_item.DetailUrl }}" class="item-image-link">
+    <div class="item-image bg-cover" style="background-image: url('{{ rss_item.ImageUrl |raw }}')"></div>
+  </a>
+  <h3 class="item-title">{{ rss_item.Name }}</h3>
+  <div class="item-category-wrapper">
+    <span>{{ 'Category: '|t }}</span>
+    <label>{{ rss_item.CategoryLabel }}</label>
+  </div>
+  <div class="item-publication-date-wrapper">
+    <span>{{ 'Publication Date: '|t }}</span>
+    <label>{{ rss_item.PublicationDate }}</label>
+  </div>
+  <a href="{{ rss_item.DetailUrl }}" class="item-view-link link-btn">{{ 'Read more'|t }}</a>
+</div>

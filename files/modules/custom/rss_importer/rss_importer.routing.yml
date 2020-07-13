@@ -1,0 +1,54 @@
+rss_importer.admin:
+  path: '/admin/structure/rss-importer'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'RSS Importer content'
+  requirements:
+    _permission: 'administer site configuration'
+
+rss_importer.rss_import_controller:
+  path: '/admin/rss-importer/sync'
+  defaults:
+    _controller: '\Drupal\rss_importer\Controller\RssImportController::importRssFeed'
+    _title: 'Import Rss Feed'
+  requirements:
+    _permission: 'administer site configuration'
+
+rss_importer.rss_settings_form:
+  path: '/admin/config/rss_importer/rsssettings'
+  defaults:
+    _form: '\Drupal\rss_importer\Form\RssSettingsForm'
+    _title: 'RssSettingsForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+rss_importer.rss-item-overview:
+  path: '/items-overview'
+  defaults:
+    _form: '\Drupal\rss_importer\Form\RssOverviewForm'
+    _title: 'RSS Items Overview'
+  requirements:
+    _permission: 'access content'
+
+rss_importer.rss_search_form:
+  path: '/rss_importer/form/rss_search'
+  defaults:
+    _form: '\Drupal\rss_importer\Form\RssSearchForm'
+    _title: 'RssSearchForm'
+  requirements:
+    _access: 'TRUE'
+
+rss_importer.rss_item_detail:
+  path: '/rss-item/{rss_item}'
+  defaults:
+    _controller: '\Drupal\rss_importer\Controller\RssOverviewController::rssItemDetail'
+    _title_callback: '\Drupal\rss_importer\Controller\RssOverviewController::rssItemTitle'
+  options:
+    parameters:
+      rss_item:
+        type: entity:rss_item
+  requirements:
+    _access: 'TRUE'
+

@@ -1,0 +1,46 @@
+@import "variables";
+
+.search-form-container {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $border-color-light;
+  input {
+    height: 40px;
+    border-radius: 0;
+    border: 1px solid $border-color;
+    padding: 0 15px;
+
+    &.form-text {
+      border: 1px solid $border-color;
+    }
+    &:focus, &:active {
+      border: 1px solid $border-color;
+    }
+  }
+
+  .title-wrapper {
+    display: inline-block;
+    max-width: 350px;
+    margin-right: 20px;
+  }
+
+  .publication-date-wrapper {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  input.submit-button {
+    display: inline-block;
+    margin: 0;
+    background: $color-blue;
+    color: #fff;
+    text-transform: uppercase;
+    &:focus, &:hover {
+      background: $color-blue-hover;
+    }
+  }
+}
+
+.rss-items-overview-wrapper {
+  margin: 0 -15px;
+}

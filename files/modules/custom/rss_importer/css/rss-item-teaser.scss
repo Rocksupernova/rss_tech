@@ -1,0 +1,40 @@
+@import "variables";
+.rss-item-teaser {
+  padding: 20px;
+  border: 1px solid $border-color;
+  margin-bottom: 40px;
+
+  .item-image-link {
+    &:hover {
+      .item-image {
+        opacity: 0.8;
+      }
+    }
+  }
+  .item-image {
+    height: 200px;
+    width: 100%;
+    background-color: $border-color;
+  }
+  .item-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 15px 0 20px;
+    min-height: 35px;
+  }
+  .item-category-wrapper, .item-publication-date-wrapper {
+    font-size: 12px;
+    span {
+      display: inline-block;
+    }
+    label {
+      display: inline-block;
+    }
+  }
+  .item-publication-date-wrapper {
+    margin-bottom: 10px;
+  }
+  .item-view-link {
+
+  }
+}

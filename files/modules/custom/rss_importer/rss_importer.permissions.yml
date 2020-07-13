@@ -1,0 +1,20 @@
+add rss item entities:
+  title: 'Create new Rss Item entities'
+
+administer rss item entities:
+  title: 'Administer Rss Item entities'
+  description: 'Allow to access the administration form to configure Rss Item entities.'
+  restrict access: true
+
+delete rss item entities:
+  title: 'Delete Rss Item entities'
+
+edit rss item entities:
+  title: 'Edit Rss Item entities'
+
+view published rss item entities:
+  title: 'View published Rss Item entities'
+
+view unpublished rss item entities:
+  title: 'View unpublished Rss Item entities'
+

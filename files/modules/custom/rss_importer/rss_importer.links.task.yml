@@ -1,0 +1,21 @@
+# Rss Item routing definition
+rss_item.settings_tab:
+  route_name: rss_item.settings
+  title: 'Settings'
+  base_route: rss_item.settings
+
+entity.rss_item.canonical:
+  route_name: entity.rss_item.canonical
+  base_route: entity.rss_item.canonical
+  title: 'View'
+
+entity.rss_item.edit_form:
+  route_name: entity.rss_item.edit_form
+  base_route: entity.rss_item.canonical
+  title: 'Edit'
+
+entity.rss_item.delete_form:
+  route_name:  entity.rss_item.delete_form
+  base_route:  entity.rss_item.canonical
+  title: Delete
+  weight: 10

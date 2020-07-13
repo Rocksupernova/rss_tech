@@ -1,0 +1,15 @@
+<div class="rss-items-overview-wrapper">
+  <div class="container">
+    <div class="search-wrapper">
+      {{ data.search }}
+    </div>
+    <div class="row">
+      {% for item in data.results %}
+        <div class="col-md-3">
+          {{ item }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
